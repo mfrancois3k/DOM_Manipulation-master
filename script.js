@@ -67,14 +67,11 @@ backgroundChange();
 
   // Part 6
 function addingDom () {
-//   var sideBar = document.querySelectorAll('.side-bar li');
- 
-//   Array.from(sideBar).forEach(function(sideBar) {
-//     sideBar.textContent += '(New link)';
-//  });
-  var sideBar = document.querySelectorAll('.side-bar');
-  let races = sideBar[1];
-  let ul = races.querySelector('ul')
+var myNewListItem = document.createElement('li');
+
+const myul4 = document.getElementsByClassName('side-bar')[1].getElementsByTagName('ul')[0];
+myNewListItem.textContent = "New York";
+myul4.appendChild(myNewListItem);
 
 }
 
