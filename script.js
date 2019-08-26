@@ -17,10 +17,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Do all of your work inside the document.addEventListener  
 
   // Part 1
+function changeTitle() {
+  var title = document.getElementById('main-title');
 
-
+  title.innerHTML = "Dom\'s  page"
+  
+}
+changeTitle()
   // Part 2
-
+function backgroundChange() {
+  var colorChange = document.querySelector('body').style.background = "#FF9E77";
+   console.log(colorChange);
+}
+backgroundChange();
 
   // Part 3
     function faveThings() {
@@ -58,21 +67,50 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Part 6
 function addingDom () {
-  var sideBar = document.querySelectorAll('.side-bar li');
+//   var sideBar = document.querySelectorAll('.side-bar li');
  
-  Array.from(sideBar).forEach(function(sideBar) {
-    sideBar.textContent += '(New link)';
- });
+//   Array.from(sideBar).forEach(function(sideBar) {
+//     sideBar.textContent += '(New link)';
+//  });
+  var sideBar = document.querySelectorAll('.side-bar');
+  let races = sideBar[1];
+  let ul = races.querySelector('ul')
+
 }
 
 addingDom () 
 
   // Part 7
-  
+  function newBlog() {
+    let post = document.createElement('div');
+    console.log(post)
+    post.className ="blog-post";
+
+    let title =document.createElement('hi');
+    title.innerHTML = 'The Bronx'
+
+    let p = document.createElement('p')
+    p.innerHTML = "I DROVE MY CAR INTO A BODEGA AND PICKED UP A BACONEEGGANDCHEESE"
+
+    let main =document.querySelector('.main')
+
+    main.appendChild(post);
+    post.appendChild(title);
+    post.appendChild(p)
+
+  }
+
+  newBlog()
 
 
   // Part 8
+   function randomQuote() {
+     let button = document.querySelector(#quate-title);
+     console.log(button)
+     button.addEventListener('click', randomQuote)
+   }
 
+   randomQuote()
 
   // Part 9
 
